@@ -26,9 +26,9 @@ export default function Skills() {
   }
 
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-foreground">Skills</h2>
         {Object.entries(skillsData).map(([category, skills], index) => (
           <motion.div
             key={index}
@@ -37,10 +37,10 @@ export default function Skills() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="mb-8"
           >
-            <h3 className="text-xl font-semibold mb-4">{category}</h3>
+            <h3 className="text-xl font-semibold mb-4 text-foreground">{category}</h3>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, i) => (
-                <span key={i} className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+                <span key={i} className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm">
                   {skill}
                 </span>
               ))}
