@@ -16,25 +16,24 @@ export default function Education() {
   ]
 
   return (
-    <section className="py-10 bg-white dark:bg-gray-800">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-gray-800 dark:text-white">Education</h2>
-        <div className="space-y-6">
-          <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 shadow-sm">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Bachelor of Science in Computer Science
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mt-1">Oct 2024 - Present</p>
-            <p className="text-gray-700 dark:text-gray-300 mt-2">
-              Relevant courses: Algorithms and Data Structures, Software Engineering, Databases, Distributed Systems
-            </p>
-          </div>
-          <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 shadow-sm">
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              Higher Technical College, Matura in Computer Science
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mt-1">Sep 2018 - May 2023</p>
-          </div>
+        <h2 className="text-3xl font-bold mb-8 text-center">Education</h2>
+        <div className="space-y-8">
+          {educationData.map((edu, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-gray-100 p-6 rounded-lg shadow-md"
+            >
+              <h3 className="text-xl font-semibold mb-2">{edu.institution}</h3>
+              <p className="text-gray-600 mb-2">{edu.degree}</p>
+              <p className="text-gray-500 mb-2">{edu.date}</p>
+              {edu.details && <p className="text-gray-700">{edu.details}</p>}
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
