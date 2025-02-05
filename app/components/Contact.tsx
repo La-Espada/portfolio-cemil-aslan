@@ -2,14 +2,14 @@ import { motion } from "framer-motion"
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-zinc-50 dark:bg-gray-950">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center text-foreground">Get in Touch</h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-md mx-auto"
+          className="max-w-md mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md"
         >
           <p className="text-center mb-6 text-muted-foreground">Feel free to reach out for collaborations or just a friendly hello</p>
           <div className="space-y-4">
