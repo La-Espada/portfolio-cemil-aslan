@@ -36,28 +36,20 @@ export default function Experience() {
   ]
 
   return (
-    <section className="py-20 bg-gray-100">
+    <section className="py-10 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Work Experience</h2>
-        <div className="space-y-8">
-          {experienceData.map((exp, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-6 rounded-lg shadow-md"
-            >
-              <h3 className="text-xl font-semibold mb-2">{exp.company}</h3>
-              <p className="text-gray-600 mb-2">{exp.position}</p>
-              <p className="text-gray-500 mb-2">{exp.date}</p>
-              <ul className="list-disc list-inside text-gray-700">
-                {exp.details.map((detail, i) => (
-                  <li key={i}>{detail}</li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
+        <h2 className="text-3xl font-bold mb-8 text-gray-800 dark:text-white">Work Experience</h2>
+        <div className="space-y-6">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              Backend Developer
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mt-1">Oct 2023 - Present</p>
+            <ul className="mt-4 space-y-2 text-gray-700 dark:text-gray-300">
+              <li>• Developed and optimized the backend of the BlueWatch Mobile-App using Django</li>
+              <li>• Implemented RESTful APIs for efficient communication between frontend and backend</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
