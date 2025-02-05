@@ -2,21 +2,21 @@ import { motion } from "framer-motion"
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-zinc-50 dark:bg-gray-950">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Get in Touch</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-foreground">Get in Touch</h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="max-w-md mx-auto"
+          className="max-w-md mx-auto bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md"
         >
-          <p className="text-center mb-6">Feel free to reach out for collaborations or just a friendly hello</p>
+          <p className="text-center mb-6 text-muted-foreground">Feel free to reach out for collaborations or just a friendly hello</p>
           <div className="space-y-4">
             <div className="flex items-center justify-center space-x-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-500"
+                className="h-6 w-6 text-primary"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -28,14 +28,14 @@ export default function Contact() {
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <a href="mailto:aslancemil09@gmail.com" className="text-blue-500 hover:underline">
+              <a href="mailto:aslancemil09@gmail.com" className="text-primary hover:text-primary/80 hover:underline">
                 aslancemil09@gmail.com
               </a>
             </div>
             <div className="flex items-center justify-center space-x-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-500"
+                className="h-6 w-6 text-primary"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -47,12 +47,12 @@ export default function Contact() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              <span>+43 664 1840791</span>
+              <span className="text-foreground">+43 664 1840791</span>
             </div>
             <div className="flex items-center justify-center space-x-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-500"
+                className="h-6 w-6 text-primary"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -64,12 +64,12 @@ export default function Contact() {
                   d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
                 />
               </svg>
-              <span>Wien, Österreich</span>
+              <span className="text-foreground">Wien, Österreich</span>
             </div>
             <div className="flex items-center justify-center space-x-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-blue-500"
+                className="h-6 w-6 text-primary"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -79,7 +79,7 @@ export default function Contact() {
                 href="https://linkedin.com/in/cemil-aslan"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:underline"
+                className="text-primary hover:text-primary/80 hover:underline"
               >
                 linkedin.com/in/cemil-aslan
               </a>

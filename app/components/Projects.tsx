@@ -21,10 +21,25 @@ export default function Projects() {
     },
   ]
 
+  const getTagColor = (tag: string) => {
+    const colors = {
+      "React": "bg-blue-500 dark:bg-blue-600",
+      "Spring Boot": "bg-green-500 dark:bg-green-600",
+      "Full-Stack": "bg-purple-500 dark:bg-purple-600",
+      "C#": "bg-indigo-500 dark:bg-indigo-600",
+      "Xamarin": "bg-blue-500 dark:bg-blue-600",
+      "Mobile Development": "bg-cyan-500 dark:bg-cyan-600",
+      "TypeScript": "bg-blue-500 dark:bg-blue-600",
+      "Algorithm Design": "bg-red-500 dark:bg-red-600",
+      "Simulation": "bg-orange-500 dark:bg-orange-600"
+    }
+    return colors[tag] || "bg-gray-500 dark:bg-gray-600"
+  }
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
+        <h2 className="text-3xl font-bold mb-8 text-center text-foreground">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((project, index) => (
             <motion.div
@@ -32,13 +47,16 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gray-100 p-6 rounded-lg shadow-md"
+              className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg shadow-md"
             >
-              <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-              <p className="text-gray-700 mb-4">{project.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">{project.name}</h3>
+              <p className="text-muted-foreground mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tags.map((tag, i) => (
-                  <span key={i} className="bg-blue-500 text-white px-2 py-1 rounded-full text-sm">
+                  <span 
+                    key={i} 
+                    className={`${getTagColor(tag)} text-white px-2 py-1 rounded-full text-sm hover:opacity-90 transition-opacity`}
+                  >
                     {tag}
                   </span>
                 ))}
