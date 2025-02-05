@@ -36,7 +36,7 @@ export default function Experience() {
   ]
 
   return (
-    <section className="py-20 bg-slate-100 dark:bg-gray-850">
+        <section className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center text-foreground">Work Experience</h2>
         <div className="space-y-8">
@@ -46,9 +46,10 @@ export default function Experience() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+              className="bg-gray-50 dark:bg-gray-900 p-6 rounded-lg shadow-md"
             >
               <h3 className="text-xl font-semibold mb-2 text-foreground">{exp.company}</h3>
+
               <p className="text-muted-foreground mb-2">{exp.position}</p>
               <p className="text-muted-foreground mb-2">{exp.date}</p>
               <ul className="list-disc list-inside text-foreground">
